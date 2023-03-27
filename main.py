@@ -5,7 +5,7 @@ from ultralytics import YOLO
 import supervision as sv
 import numpy as np
 
-
+# python main.py --webcam-resolution 640 360
 ZONE_POLYGON = np.array([
     [0, 0],
     [0.5, 0],
@@ -34,7 +34,7 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, frame_width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, frame_height)
 
-    model = YOLO("yolov8l.pt")
+    model = YOLO("yolov8n.pt")
 
     box_annotator = sv.BoxAnnotator(
         thickness=2,
